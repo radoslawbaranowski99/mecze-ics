@@ -32,8 +32,8 @@ w Google Calendar → importuj przez „Ustawienia → Importuj”.
 w Outlooku → przeciągnij plik do kalendarza.
 
 ## 📂 Struktura projektu
-mecze-ics/
-│-- mecze.py        # główny skrypt
+mecze-ics
+│-- mecze-ics.py        # główny skrypt
 │-- matches.ics     # wygenerowany plik kalendarza
 │-- README.md       # opis projektu
 
