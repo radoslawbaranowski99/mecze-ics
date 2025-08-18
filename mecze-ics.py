@@ -1,13 +1,16 @@
+
+#import calendar library
 from ics import Calendar, Event
 from datetime import datetime, date, timedelta
 import os
 
+#Dropbox folder path
 DROPBOX_FOLDER = r"C:\Users\rados\Dropbox"
 ICS_FILENAME = "matches.ics"
 ICS_PATH = os.path.join(DROPBOX_FOLDER, "matches.ics")
 
 
-
+#List of matches
 matches = [
     {"team": "Anwil Włocławek", "opponent": "KB Bashkimi Prizen", "date": "2025-10-01"},
     {"team": "Anwil Włocławek", "opponent": "Tauron GTK Gliwice", "date": "2025-10-06"},
@@ -49,6 +52,7 @@ matches = [
     {"team": "Wisła Płock", "opponent": "Górnik Zabrze", "date": "2026-05-16"},
 ]
 
+#Ticket links
 tickets = {
     "Wisła Płock": "https://bilety.wisla-plock.pl",
     "Anwil Włocławek": "https://kkwloclawek.abilet.pl",
@@ -67,6 +71,7 @@ for m in matches:
     days_to_match = (match_date - today).days
     ticket_link = tickets.get(m["team"])
 
+    #Add description with ticket info
     if days_to_match <= 14 and ticket_link:
         event.description = f"Sprawdź dostępność biletu: {ticket_link}"
     elif days_to_match <= 14:
@@ -76,10 +81,10 @@ for m in matches:
 
     calendar.events.add(event)
 
-    # Dodatkowo print w konsoli
+    #Console output
     print(f"{m['team']} vs {m['opponent']} ({m['date']}): {event.description}")
 
-# Zapis do .ics
+#Save .ics file in Dropbox
 with open(ICS_PATH, "w", encoding="utf-8") as f:
     f.write(str(calendar))
 
