@@ -26,3 +26,37 @@ Dzięki temu mecze mogą być automatycznie dodawane do Twojego kalendarza (Appl
     python -m venv venv
     venv\Scripts\activate   # Windows
     source venv/bin/activate # Linux/Mac
+
+   ▶️ Użycie
+
+Uruchom skrypt:
+python mecze.py
+
+W folderze projektu pojawi się plik:
+matches.ics
+
+Otwórz matches.ics:
+na iPhonie → otworzy się w aplikacji Kalendarz, kliknij „Dodaj”.
+w Google Calendar → importuj przez „Ustawienia → Importuj”.
+w Outlooku → przeciągnij plik do kalendarza.
+
+📂 Struktura projektu
+mecze-ics/
+│-- mecze.py        # główny skrypt
+│-- matches.ics     # wygenerowany plik kalendarza
+│-- README.md       # opis projektu
+
+💡 Przykład działania
+
+Jeśli do meczu pozostały dwa tygodnie → w kalendarzu pojawia się przypomnienie:
+„Sprawdź czy dostępne są bilety (link: ... )”
+
+🛠️ Technologie
+
+Python 3
+ics – obsługa plików kalendarza
+requests, BeautifulSoup – pobieranie i parsowanie terminarzy
+
+📌 Autor
+Projekt stworzony w ramach nauki Pythona po kursie podstawowym.
+Możesz używać i rozwijać dalej 🚀
