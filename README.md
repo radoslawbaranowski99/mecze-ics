@@ -2,7 +2,6 @@
 
 Skrypt w Pythonie, który pobiera terminarze drużyn sportowych i zapisuje je do pliku `.ics` (kalendarz).  
 Dodatkowo, jeśli do meczu został tydzień, przypomina o sprawdzeniu dostępności biletów.  
-
 Dzięki temu mecze mogą być automatycznie dodawane do Twojego kalendarza (Apple, Google, Outlook).
 
 ---
@@ -18,8 +17,8 @@ Dzięki temu mecze mogą być automatycznie dodawane do Twojego kalendarza (Appl
 ## 🚀 Instalacja
 
 1. Pobierz repozytorium:
-   ```bash
-   git clone https://github.com/TWOJA_NAZWA/mecze-ics.git
+   '''bash
+   git clone (https://github.com/radoslawbaranowski99/mecze-ics)
    cd mecze-ics
 2.  Zainstaluj wymagane biblioteki:
     pip install requests beautifulsoup4 ics
