@@ -46,7 +46,6 @@ Jeśli do meczu pozostały dwa tygodnie → w kalendarzu pojawia się przypomnie
 
 Python 3
 ics – obsługa plików kalendarza
-requests, BeautifulSoup – pobieranie i parsowanie terminarzy
 
 ## 📌 Autor
 Projekt stworzony w ramach nauki Pythona po kursie podstawowym.
