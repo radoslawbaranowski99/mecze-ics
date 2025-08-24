@@ -84,8 +84,12 @@ for m in matches:
     #Console output
     print(f"{m['team']} vs {m['opponent']} ({m['date']}): {event.description}")
 
-#Save .ics file in Dropbox
-with open(ICS_PATH, "w", encoding="utf-8") as f:
-    f.write(str(calendar))
+# Saving ics file in local folder
+import os
 
-print("✅ Plik {ICS_FILENAME} zapisany w folderze Dropbox: {DROPBOX_FOLDER}")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+local_path = os.path.join(script_dir, "matches.ics")
+
+with open(local_path, "w", encoding="utf-8") as f:
+    f.writelines(calendar.serialize_iter())
+print(f"✅ File saved in local folder: {local_path}")
